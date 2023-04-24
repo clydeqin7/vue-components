@@ -16,7 +16,7 @@
 
 <script>
 import InputNumber from "@/components/InputNumber.vue";
-import ElInputMoney from "@/components/ElInputNumber.vue";
+import ElInputMoney from "@/components/ElInputMoney.vue";
 export default {
   name: "InputNumberWrapper",
   components: { InputNumber, ElInputMoney },
