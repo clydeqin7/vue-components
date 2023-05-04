@@ -20,9 +20,14 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/Test",
+    path: "/test",
     name: "Test",
     component: () => import("../views/Test.vue"),
+  },
+  {
+    path: "/word_cloud",
+    name: "WordCloud",
+    component: () => import("../views/WordCloud.vue"),
   },
 ];
 
