@@ -29,6 +29,11 @@ const routes = [
     name: "WordCloud",
     component: () => import("../views/WordCloud.vue"),
   },
+  {
+    path: "/echarts_word_cloud",
+    name: "EchartsWordCloud",
+    component: () => import("../views/EchartsWordCloud.vue"),
+  },
 ];
 
 const router = new VueRouter({

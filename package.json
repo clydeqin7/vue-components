@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "echarts": "^5.4.2",
+    "echarts-wordcloud": "^2.1.0",
     "element-ui": "^2.15.13",
     "lodash": "^4.17.21",
     "vue": "^2.6.11",
