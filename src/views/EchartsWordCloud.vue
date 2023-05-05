@@ -1,9 +1,14 @@
 <template>
-  <div
-    id="main"
-    ref="chart"
-    style="width: 100%; height: 600px; border: 1px solid red"
-  ></div>
+  <div>
+    <el-popover ref="popover" placement="top">
+      <p>这是弹窗内容</p>
+    </el-popover>
+    <div
+      id="main"
+      ref="chart"
+      style="width: 100%; height: 600px; border: 1px solid red"
+    ></div>
+  </div>
 </template>
 
 <script>
@@ -158,7 +163,20 @@ export default {
       _thatChat.setOption(option);
 
       _thatChat.on("click", (params) => {
-        alert(`${params.name} 被点击了`);
+        console.log("== click params ==");
+        console.log(params);
+        console.log("== click params ==");
+        // alert(`${params.name} 被点击了`);
+        debugger;
+        // 获取点击的元素信息
+        const x = params.event.offsetX;
+        const y = params.event.offsetY;
+
+        this.$refs.popover.$el.style.position = "absolute";
+        this.$refs.popover.$el.style.top = y + "px";
+        this.$refs.popover.$el.style.left = x + "px";
+        this.$refs.popover.showPopper = true;
+        console.log("this.$refs", this.$refs);
       });
     },
   },
